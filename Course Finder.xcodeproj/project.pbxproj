@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		DE801ECF1FCED8B3008FBB98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE801ECE1FCED8B3008FBB98 /* AppDelegate.swift */; };
-		DE801ED11FCED8B3008FBB98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE801ED01FCED8B3008FBB98 /* ViewController.swift */; };
 		DE801ED41FCED8B3008FBB98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE801ED21FCED8B3008FBB98 /* Main.storyboard */; };
 		DE801ED61FCED8B3008FBB98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE801ED51FCED8B3008FBB98 /* Assets.xcassets */; };
 		DE801ED91FCED8B3008FBB98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE801ED71FCED8B3008FBB98 /* LaunchScreen.storyboard */; };
+		DE801EE11FCEECFA008FBB98 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE801EE01FCEECFA008FBB98 /* Course.swift */; };
+		DE801EE31FCEEF39008FBB98 /* CourseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE801EE21FCEEF39008FBB98 /* CourseStore.swift */; };
+		DE801EE51FCEF560008FBB98 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE801EE41FCEF560008FBB98 /* CoursesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DE801ECB1FCED8B3008FBB98 /* Course Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Course Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE801ECE1FCED8B3008FBB98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DE801ED01FCED8B3008FBB98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DE801ED31FCED8B3008FBB98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE801ED51FCED8B3008FBB98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE801ED81FCED8B3008FBB98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE801EDA1FCED8B3008FBB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE801EE01FCEECFA008FBB98 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		DE801EE21FCEEF39008FBB98 /* CourseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseStore.swift; sourceTree = "<group>"; };
+		DE801EE41FCEF560008FBB98 /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +59,39 @@
 			isa = PBXGroup;
 			children = (
 				DE801ECE1FCED8B3008FBB98 /* AppDelegate.swift */,
-				DE801ED01FCED8B3008FBB98 /* ViewController.swift */,
-				DE801ED21FCED8B3008FBB98 /* Main.storyboard */,
+				DE801EE61FCEF5D9008FBB98 /* view */,
 				DE801ED51FCED8B3008FBB98 /* Assets.xcassets */,
 				DE801ED71FCED8B3008FBB98 /* LaunchScreen.storyboard */,
 				DE801EDA1FCED8B3008FBB98 /* Info.plist */,
+				DE801EE71FCEF5F8008FBB98 /* model */,
+				DE801EE81FCEF607008FBB98 /* controller */,
 			);
 			path = "Course Finder";
+			sourceTree = "<group>";
+		};
+		DE801EE61FCEF5D9008FBB98 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				DE801ED21FCED8B3008FBB98 /* Main.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		DE801EE71FCEF5F8008FBB98 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				DE801EE01FCEECFA008FBB98 /* Course.swift */,
+				DE801EE21FCEEF39008FBB98 /* CourseStore.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		DE801EE81FCEF607008FBB98 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				DE801EE41FCEF560008FBB98 /* CoursesViewController.swift */,
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +166,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE801ED11FCED8B3008FBB98 /* ViewController.swift in Sources */,
+				DE801EE11FCEECFA008FBB98 /* Course.swift in Sources */,
+				DE801EE31FCEEF39008FBB98 /* CourseStore.swift in Sources */,
 				DE801ECF1FCED8B3008FBB98 /* AppDelegate.swift in Sources */,
+				DE801EE51FCEF560008FBB98 /* CoursesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
