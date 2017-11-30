@@ -18,7 +18,7 @@ class CoursesViewController: UIViewController {
     
     
     var courses:[Course] = CourseStore.downloadNewCourses()
-    
+    var selectedCourse:Course!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,11 +43,13 @@ class CoursesViewController: UIViewController {
     }
     
     @IBAction func chefCourseDidtap(_ sender: Any) {
+    
+        let chefCourse = self.courses[0]
+        selectedCourse = chefCourse
+        print(selectedCourse.title)
         
-        
-        
-        
-        
+        self.performSegue(withIdentifier: StoryBoard.showCourseDetail, sender: self)
+       
     }
     
     
@@ -55,23 +57,40 @@ class CoursesViewController: UIViewController {
     @IBAction func developerCourseDidTap(_ sender: Any) {
         
         
+        let developerCourse = self.courses[1]
+        selectedCourse = developerCourse
+        print(selectedCourse.title)
         
-        
-        
+        self.performSegue(withIdentifier: StoryBoard.showCourseDetail, sender: self)
         
     }
     
     
     @IBAction func popStarCourseDidTap(_ sender: Any) {
         
+        let popStarCourse = self.courses[2]
+        selectedCourse = popStarCourse
+        print(selectedCourse.title)
         
-        
-        
-        
+        self.performSegue(withIdentifier: StoryBoard.showCourseDetail, sender: self)
     }
     
+    struct StoryBoard {
+        static let showCourseDetail = "showCourseDetail"
+    }
     
-    
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == StoryBoard.showCourseDetail {
+            
+            if let courseDetailViewController = segue.destination as? CourseDetailViewController{
+                courseDetailViewController.course = self.selectedCourse
+                
+                
+            }
+            
+            
+        }
+    }
 
 }
