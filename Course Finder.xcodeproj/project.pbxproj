@@ -15,6 +15,10 @@
 		DE801EE11FCEECFA008FBB98 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE801EE01FCEECFA008FBB98 /* Course.swift */; };
 		DE801EE31FCEEF39008FBB98 /* CourseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE801EE21FCEEF39008FBB98 /* CourseStore.swift */; };
 		DE801EE51FCEF560008FBB98 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE801EE41FCEF560008FBB98 /* CoursesViewController.swift */; };
+		DE9FE5F01FD938C7005AD04B /* YouTubePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9FE5ED1FD938C7005AD04B /* YouTubePlayer.swift */; };
+		DE9FE5F11FD938C7005AD04B /* YoutubePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9FE5EE1FD938C7005AD04B /* YoutubePlayerViewController.swift */; };
+		DE9FE5F21FD938C7005AD04B /* YTPlayer.html in Resources */ = {isa = PBXBuildFile; fileRef = DE9FE5EF1FD938C7005AD04B /* YTPlayer.html */; };
+		DE9FE5F41FD9397D005AD04B /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9FE5F31FD9397D005AD04B /* PlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		DE801EE01FCEECFA008FBB98 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		DE801EE21FCEEF39008FBB98 /* CourseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseStore.swift; sourceTree = "<group>"; };
 		DE801EE41FCEF560008FBB98 /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
+		DE9FE5ED1FD938C7005AD04B /* YouTubePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YouTubePlayer.swift; sourceTree = "<group>"; };
+		DE9FE5EE1FD938C7005AD04B /* YoutubePlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubePlayerViewController.swift; sourceTree = "<group>"; };
+		DE9FE5EF1FD938C7005AD04B /* YTPlayer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = YTPlayer.html; sourceTree = "<group>"; };
+		DE9FE5F31FD9397D005AD04B /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				DE801ED21FCED8B3008FBB98 /* Main.storyboard */,
+				DE9FE5EC1FD938C7005AD04B /* YoutubePlayer */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -93,8 +102,19 @@
 			children = (
 				DE801EE41FCEF560008FBB98 /* CoursesViewController.swift */,
 				DE7FC27E1FD00FF800310C04 /* CourseDetailViewController.swift */,
+				DE9FE5F31FD9397D005AD04B /* PlayerViewController.swift */,
 			);
 			path = controller;
+			sourceTree = "<group>";
+		};
+		DE9FE5EC1FD938C7005AD04B /* YoutubePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				DE9FE5ED1FD938C7005AD04B /* YouTubePlayer.swift */,
+				DE9FE5EE1FD938C7005AD04B /* YoutubePlayerViewController.swift */,
+				DE9FE5EF1FD938C7005AD04B /* YTPlayer.html */,
+			);
+			path = YoutubePlayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +178,7 @@
 			files = (
 				DE801ED91FCED8B3008FBB98 /* LaunchScreen.storyboard in Resources */,
 				DE801ED61FCED8B3008FBB98 /* Assets.xcassets in Resources */,
+				DE9FE5F21FD938C7005AD04B /* YTPlayer.html in Resources */,
 				DE801ED41FCED8B3008FBB98 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +190,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE9FE5F11FD938C7005AD04B /* YoutubePlayerViewController.swift in Sources */,
+				DE9FE5F41FD9397D005AD04B /* PlayerViewController.swift in Sources */,
+				DE9FE5F01FD938C7005AD04B /* YouTubePlayer.swift in Sources */,
 				DE7FC27F1FD00FF800310C04 /* CourseDetailViewController.swift in Sources */,
 				DE801EE11FCEECFA008FBB98 /* Course.swift in Sources */,
 				DE801EE31FCEEF39008FBB98 /* CourseStore.swift in Sources */,

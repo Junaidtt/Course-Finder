@@ -55,7 +55,9 @@
                         <color key="backgroundColor" red="0.17254901960784313" green="0.21176470588235294" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Courses" id="ldm-3w-yZD"/>
+                    <navigationItem key="navigationItem" title="Courses" id="ldm-3w-yZD">
+                        <barButtonItem key="backBarButtonItem" title=" " id="JSG-pk-VRR"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="chefCourseButton" destination="b5a-8M-83J" id="IQY-0Y-wm7"/>
                         <outlet property="developerCourseButton" destination="n0c-fh-m73" id="Gau-th-1N6"/>
@@ -89,6 +91,7 @@
                                         <state key="normal" image="play"/>
                                         <connections>
                                             <action selector="playButtonDidTap:" destination="Rc8-nf-bmR" eventType="touchUpInside" id="FQA-hc-BcQ"/>
+                                            <segue destination="Rl0-ba-c38" kind="presentation" identifier="presentPlayer" id="h5v-CX-Hbe"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Become a Swift Developer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ol-aE-Omo">
@@ -136,6 +139,39 @@
             </objects>
             <point key="canvasLocation" x="1301.5999999999999" y="133.5832083958021"/>
         </scene>
+        <!--Player View Controller-->
+        <scene sceneID="XUG-qb-DLU">
+            <objects>
+                <viewController id="Rl0-ba-c38" customClass="PlayerViewController" customModule="Course_Finder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SLV-wU-SMG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vad-ON-eZN" customClass="YouTubePlayerView" customModule="Course_Finder" customModuleProvider="target">
+                                <rect key="frame" x="16" y="162" width="343" height="343"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="805-Ox-4fy">
+                                <rect key="frame" x="16" y="51" width="15" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeButtonDidTap:" destination="Rl0-ba-c38" eventType="touchUpInside" id="4QU-Rm-ehg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.27688059210777283" green="0.32044273614883423" blue="0.38696029782295227" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="WR6-pP-EsI"/>
+                    </view>
+                    <connections>
+                        <outlet property="youTubePlayer" destination="vad-ON-eZN" id="xdo-r2-tV6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vRy-w5-Mvo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2056.8000000000002" y="133.5832083958021"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="bFi-S4-rzk">
             <objects>
@@ -144,6 +180,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xqV-nH-eQv">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.17254901960784313" green="0.21176470588235294" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
@@ -161,6 +198,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="close" width="15" height="15"/>
         <image name="cover_chef" width="373" height="204"/>
         <image name="developer" width="2432" height="3648"/>
         <image name="play" width="144" height="144"/>
